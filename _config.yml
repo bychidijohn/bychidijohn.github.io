@@ -1,0 +1,43 @@
+# Site settings — replace placeholders before pushing
+title: "YOUR NAME"
+tagline: "Personalization, causal inference, and incentive optimization."
+description: "Writeups on uplift modeling, off-policy evaluation, and ML systems for growth."
+author: "YOUR NAME"
+email: "your.email@example.com"
+
+# Replace YOUR-GITHUB-USERNAME with your actual handle.
+# If your repo is named YOUR-GITHUB-USERNAME.github.io, leave baseurl empty.
+# If hosted at a subpath (e.g., username.github.io/site), set baseurl: "/site"
+url: "https://YOUR-GITHUB-USERNAME.github.io"
+baseurl: ""
+
+github_username: "YOUR-GITHUB-USERNAME"
+linkedin_username: "YOUR-LINKEDIN-HANDLE"
+twitter_username: ""  # optional, leave empty to hide
+google_scholar: ""    # optional
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+timezone: America/Los_Angeles
+
+# Kramdown options for prettier math + footnotes
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  smart_quotes: ["lsquo", "rsquo", "ldquo", "rdquo"]
+
+# Files to exclude from the build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore
+
+# Plugins (GitHub Pages whitelist)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap

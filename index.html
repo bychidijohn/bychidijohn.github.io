@@ -1,0 +1,26 @@
+---
+layout: default
+title: Home
+---
+
+<section class="intro">
+  <h1>I work on <em>personalization</em>, causal inference, and incentive optimization.</h1>
+  <p>Senior ML engineer / applied scientist. Currently writing about uplift modeling, off-policy evaluation, and what production growth ML actually looks like.</p>
+</section>
+
+<h2 class="section-heading">Writing</h2>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}">
+      <h3 class="post-list-title">{{ post.title }}</h3>
+      <div class="post-list-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        {% if post.reading_time %} · {{ post.reading_time }} min{% endif %}
+      </div>
+      {% if post.excerpt_short %}<p class="post-list-excerpt">{{ post.excerpt_short }}</p>{% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
